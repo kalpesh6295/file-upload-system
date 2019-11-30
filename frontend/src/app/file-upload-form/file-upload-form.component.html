@@ -1,0 +1,47 @@
+
+<div class="sigup-form">
+    <div class="product_speci">
+        <button (click)="closePopup()" class="remove_product" ><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 3.752l-4.423-3.752-7.771 9.039-7.647-9.008-4.159 4.278c2.285 2.885 5.284 5.903 8.362 8.708l-8.165 9.447 1.343 1.487c1.978-1.335 5.981-4.373 10.205-7.958 4.304 3.67 8.306 6.663 10.229 8.006l1.449-1.278-8.254-9.724c3.287-2.973 6.584-6.354 8.831-9.245z"/></svg></span></button>
+      </div>
+  <h2>
+    Upload Files
+  </h2>
+  
+  <!-- <p>Register and step into the business world</p> -->
+  <form [formGroup]="myGroup">
+    <ul>
+   <li>
+   
+  <div class="first-field">
+    
+    <div class="Uname">
+      
+    <input type="text" placeholder="NAME" formControlName="Name"  pattern= "[a-zA-Z0-9_ ]+" name="Name">
+   
+    </div>
+   
+  </div>
+  </li>
+  
+  <li class="form-elements"><input type="file" accept="image/*" #file (change)="userFileUpload($event,'File')"></li>
+  <button class="btn" type="button" (click) = "file.click()">Select File</button>
+  <li class="form-elements">
+    <mat-slide-toggle formControlName="accessible"
+    class="example-margin"
+    [color]="primary"
+    [checked]="checked"
+   
+>
+  Make it Public
+</mat-slide-toggle>
+  </li>
+  
+  </ul>
+  <div class="sign_up">
+    <div class="gradDynamic">
+  <button type="submit" (click)="onSubmit()" >Upload</button>
+ </div>
+  </div>
+  </form>
+  </div>
+  

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="responsive" *ngFor="let image of this.fileService.publicImages">
+      <div class="gallery">
+        
+          <img src={{image}}  width="600" height="400">
+        
+      
+        <button mat-button class="download"><a target="_blank" href={{image}}>Download</a></button>
+      </div>
+      
+    </div>
+  
+  
+  </div>

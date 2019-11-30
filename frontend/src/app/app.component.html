@@ -1,0 +1,16 @@
+<mat-toolbar class="mat-toolbar-row" color="primary">
+  <mat-toolbar-row>
+    
+     <span routerLink="/">HOME</span>
+     <span class="spacer"></span>
+     <h3 *ngIf="!this.fileService.userLoggedIn" mat-button  (click)="openSignupDialog()">Register/Login</h3>
+     <h3 *ngIf="this.fileService.userLoggedIn" [routerLink]="['/dashboard']" mat-button >{{this.fileService.userName}}</h3>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="fileupload">
+  <button mat-button mat-raised-button color="primary" class="fileupload-button" (click)="fileuploadPopup()">Upload File</button>
+</div>
+
+
+<router-outlet class="body"></router-outlet>

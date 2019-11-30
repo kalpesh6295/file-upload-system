@@ -1,0 +1,16 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+
+.fileupload{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    width: 100%;
+}
+.fileupload-button{
+    font-size: 22px;
+    padding: 10px 20px  ;
+}
